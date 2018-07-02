@@ -1,0 +1,4 @@
+- Refresh should do a git pull
+- upload file and create an entry with the checksum done automatically
+- delete entries
+- make entry form a dialog

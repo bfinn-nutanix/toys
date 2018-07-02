@@ -1,0 +1,50 @@
+{
+  "last_modified": 1472166385,
+  "iso_whitelist": {
+    "ef437d7c12bfc1b75da6163e0232a54f": {
+      "min_foundation": "3.0",
+      "hypervisor": "kvm",
+      "min_nos": null,
+      "friendly_name": "AHV 20160601.20",
+      "compatible_versions": {
+        "kvm": []
+      },
+      "version": "20160601.20",
+      "deprecated": "3.1",
+      "unsupported_hardware": [
+        ".*-G5"
+      ],
+      "validated": true
+    },
+    "478e2c6f7a875dd3dacaaeb2b0b38228": {
+      "min_foundation": "2.1",
+      "hypervisor": "esx",
+      "min_nos": null,
+      "friendly_name": "ESX 6.0",
+      "version": "6.0",
+      "unsupported_hardware": [],
+      "compatible_versions": {
+        "esx": ["^6\\.0.*"]
+      },
+      "validated": true
+    },
+    "9a00defab26a046045d939086df78460": {
+      "min_foundation": "2.1",
+      "hypervisor": "hyperv",
+      "min_nos": null,
+      "friendly_name": "Windows 2012R2",
+      "version": "2012R2",
+      "unsupported_hardware": [],
+      "skus": [
+        "datacenter",
+        "standard",
+        "standard_gui",
+        "datacenter_gui"
+      ],
+      "compatible_versions": {
+        "hyperv": [".*2012[_ -]?R2.*"]
+      },
+      "validated": false
+    }
+  }
+}

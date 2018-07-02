@@ -1,0 +1,30 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.entry-form {
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.entry-form .entry-form-heading,
+.entry-form .checkbox {
+  margin-bottom: 10px;
+}
+.entry-form .checkbox {
+  font-weight: normal;
+}
+.entry-form .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.entry-form .form-control:focus {
+  z-index: 2;
+}

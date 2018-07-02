@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Whitelist Manager</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/entry_list.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Whitelist Manager</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="gerrit_modal" tabindex="-1" role="dialog"
+      aria-labelledby="gerrit_modal_label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+            <span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="gerrit_modal_label">Gerrit message</h4>
+          </div>
+          <div class="modal-body" id="gerrit_text">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default"
+              data-dismiss="modal">Okay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">ISO whitelist</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">Whitelist entries</h2>
+          <div class="container-fluid">
+            <ul class="btn-group">
+              <li class="btn"><a id="add" href="entry_form.html">Add</a></li>
+              <li class="btn"><a id="refresh" href="#">Refresh</a></li>
+              <li class="btn"><a id="dl_all"
+                  href="../../../api/file/get_whitelist_as_file">
+                  Download all</a></li>
+              <li class="btn"><a id="dl_valid"
+                  href="../../../api/file/get_whitelist_as_file?only_validated=true">
+                  Download validated</a></li>
+              <li class="btn"><a id="push" href="#">Push validated entries to
+                git</a></li>
+            </ul>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped" id="entry_table">
+              <thead>
+                <tr>
+                  <th>Checksum</th>
+                  <th>Name</th>
+                  <th>Validated</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../js/entry_list.js"></script>
+  </body>
+</html>
+

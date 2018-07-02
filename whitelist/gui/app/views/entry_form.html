@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Whitelist Entry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/entry_form.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="entry-form" role="form">
+        <h2 class="entry-form-heading">Whitelist entry details</h2>
+        Checksum
+        <input id="checksum" type="text" class="form-control"
+          placeholder="Checksum" required autofocus>
+        </input>
+        Version
+        <input id="version" type="text" class="form-control"
+        placeholder="Version" required>
+        Friendly name
+        <input id="friendly_name" type="text" class="form-control"
+        placeholder="Friendly name" required>
+        Hypervisor
+        <select id="hypervisor" class="form-control" required>
+          <option value="kvm">AHV</option>
+          <option value="esx">ESX</option>
+          <option value="hyperv">Hyper-V</option>
+          <option value="cps">CPS</option>
+          <option value="xen">XenServer</option>
+        </select>
+        Minimum AOS version
+        <input id="min_nos" type="text" class="form-control"
+        placeholder="Minimum AOS version">
+        Minimum Foundation version
+        <input id="min_foundation" type="text" class="form-control"
+        placeholder="Minimum Foundation version">
+        <!-- TODO: Will assume it's hyp: regex; may need to extend this for
+          campatibility across hypervisors -->
+        Compatible version regex
+        <input id="compatible_versions" type="text" class="form-control"
+        placeholder="Compatible version regex">
+        Deprecated Foundation version
+        <input id="deprecated_version" type="text" class="form-control"
+        placeholder="Deprecated version">
+        Unsupported hardware regex
+        <input id="unsupported_hardware" type="text" class="form-control"
+        placeholder="Unsupported hardware regex">
+        Hyper-V SKUs
+        <select multiple id="skus" class="form-control">
+          <option value="free">Free</option>
+          <option value="standard">Standard</option>
+          <option value="datacenter">Datacenter</option>
+          <option value="standard_gui">Standard with GUI</option>
+          <option value="datacenter_gui">Datacenter with GUI</option>
+        </select>
+        <label class="checkbox">
+          <input id="validated" type="checkbox" value="validated">Validated
+        </label>
+        <button id="submit" class="btn btn-lg btn-primary btn-block">
+          Submit</button>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../js/entry_form.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
+
