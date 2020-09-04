@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+import os
+from eulabeia import test_runner
+
+test_runner.FLAGS.skip_sync = True
+test_runner.FLAGS.skip_sync_toolchain = True
+test_runner.FLAGS.repo_path = "/home/brian/workspace/main"
+test_runner.FLAGS.weboutput_path = "/home/brian/test_report/"
+test_runner.FLAGS.suite_regex = "Phoenix|Foundation"
+test_runner.FLAGS.branch = "coverage_report"
+os.environ["PATH"] += ":/home/brian/workspace/main/build/toolchain/bin/"
+
+runner = test_runner.UnitTestRunner()
+runner.run()

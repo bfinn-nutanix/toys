@@ -1,0 +1,3 @@
+#!/bin/bash
+latest_tc=$(ls -t1 $TOP/../toolchain-builds/ | grep x86 | head -n 1)
+PATH=$TOP/../toolchain-builds/$latest_tc/bin/:$PATH exec $@
